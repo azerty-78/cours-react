@@ -1,19 +1,21 @@
-import React from 'react';
-import Hello from './components/Hello';
-import Bouton from './components/Bouton';
-import Testt from './components/Testt';
+import Produit from './components/Produit.js';
+import Compteur from './components/Compteur.js';
 
 function App() {
   return (
-    <div>
-      <Hello/><br/>
-      <Bouton value="Deconnexion" /><br/>
-      <Bouton value="Connexion" /><br/>
-      <Testt nom="Djibril" prenom="Ben" prix="500" values="Valider" /><br/>
-      <Testt nom="Serge" prenom="Ben" prix="1500" values="Valider" />
-    
-    
-    </div>
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gap:"20px"
+    }}>
+      <Compteur />
+      <br/>
+      <br/>
+      <br/>
+      <Produit nom="Ordinateur" qte="12" image="💻" couleur="blue" />
+      <Produit nom="Telephone" qte="25" image="📱" couleur="red" />
+      <Produit nom="Accessoires" qte="45" image="🎧" couleur="green" />
+  </div>
   );
 }
 

@@ -10,6 +10,7 @@ function Testt({nom, prenom, prix, stocks, values}){
                 textAlign:"center",
                 border: "1px solid"
             }}>Bonsoir M/Mme {nom}, {prenom} !!!</h3>
+            
             <p>Prix : {prix}</p>
             <p>Stock : {stocks}</p>
             <Bouton value={values}/>
