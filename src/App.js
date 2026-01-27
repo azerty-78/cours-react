@@ -1,11 +1,15 @@
 import Produit from './components/Produit.js';
-import Compteur from './components/Compteur.js';
-import HooksEffect from './components/HooksEffect.js';
 
 function App() {
   return (
-    <div>
-      <HooksEffect />
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gap:"20px"
+    }}>
+      <Produit nom="Ordinateur" qte={12} image="💻" couleur="blue" />
+      <Produit nom="Telephone" qte={25} image="📱" couleur="red" />
+      <Produit nom="Accessoires" qte={45} image="🎧" couleur="green" />
   </div>
   );
 }
