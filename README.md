@@ -710,7 +710,7 @@ useEffect(() => {
 
 ## 🎯 Exercices de Révision (Utiliser tailwind css au lieu du css classique)
 
-### **Urgent !!!! (Mercredi 28) : Compteur Simple**
+### **Urgent !!!! (Mercredi 28) : Gestion Etudiant**
 Faire fonctionner le composant GestionEtudiant, corriger les erreur d'importation lancer le, comprener le et modifier le c'est votre porte d'entrer dans la creation d'application.
 
 ### **Exercice 1 (Mercredi 28) : Compteur Simple**
