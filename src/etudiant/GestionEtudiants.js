@@ -1,3 +1,7 @@
+import { useState, useEffect } from 'react';
+import CardStat from './CardStat';
+import CarteEtudiant from './CarteEtudiant';
+
 function GestionEtudiants() {
   // État pour stocker la liste des étudiants
   const [etudiants, setEtudiants] = useState([
@@ -61,7 +65,7 @@ function GestionEtudiants() {
       }
       return etudiant;
     });
-    setEtudiants(nouvelleListe);
+    setEtudiants(nouvelleListeC);
   };
 
   return (
