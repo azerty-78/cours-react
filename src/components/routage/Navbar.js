@@ -26,6 +26,9 @@ function Navbar() {
             <NavLink to="/etudiants" className={linkClass}>
               Gestion Étudiants
             </NavLink>
+            <NavLink to="/crud-api" className={linkClass}>
+              CRUD API
+            </NavLink>
           </div>
         </div>
       </div>
