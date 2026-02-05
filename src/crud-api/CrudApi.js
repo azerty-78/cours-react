@@ -15,7 +15,7 @@ function CrudApi() {
     <div className="p-8 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold text-gray-800 mb-2">CRUD API</h1>
       <p className="text-gray-600 mb-6">
-        Teste les appels à ton API Spring Boot (Articles et Users). Assure-toi que le backend tourne sur le port 8080.
+        Teste les appels à ton API MockAPI (Articles et Users) avec les endpoints fournis.
       </p>
 
       {/* Onglets simples : clic pour changer de section */}

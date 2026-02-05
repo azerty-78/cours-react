@@ -1,12 +1,13 @@
 /**
  * Service API pour les Users (CRUD).
- * Toutes les fonctions appellent ton backend Spring Boot sur /api/users.
+ * Toutes les fonctions appellent ta base MockAPI sur /user.
  * Utilisation : import { userApi } from '../api/userService';
  */
 
 import { API_BASE_URL, parseJsonResponse } from './config';
 
-const USERS_URL = `${API_BASE_URL}/api/users`;
+// Sur MockAPI : baseURL + /user
+const USERS_URL = `${API_BASE_URL}/user`;
 
 /**
  * GET - Récupérer tous les utilisateurs.

@@ -1,10 +1,12 @@
 /**
- * Configuration de l'API REST (backend Spring Boot).
- * En local : URL vide = requêtes vers le même serveur (localhost:3000), le proxy
- * de package.json redirige /api/* vers http://localhost:8080.
- * À faire : lancer l'app avec "npm start" et démarrer le backend sur le port 8080.
+ * Configuration de l'API REST.
+ *
+ * Ici, on utilise la base d'URL MockAPI fournie pour les exercices :
+ * https://698440c1885008c00db07cc8.mockapi.io/api
+ *
+ * Tous les services construiront leurs URLs à partir de cette constante.
  */
-export const API_BASE_URL = '';
+export const API_BASE_URL = 'https://698440c1885008c00db07cc8.mockapi.io/api';
 
 /**
  * Parse la réponse en JSON. Si le serveur renvoie du HTML (ex: page 404),
@@ -16,7 +18,7 @@ export async function parseJsonResponse(response) {
     const text = await response.text();
     if (text.trim().startsWith('<')) {
       throw new Error(
-        "L'API n'a pas renvoyé du JSON (réponse HTML). Vérifiez que le backend Spring Boot tourne sur le port 8080 et que vous lancez React avec 'npm start' (le proxy redirige alors /api vers le backend)."
+        "L'API n'a pas renvoyé du JSON (réponse HTML). Vérifie l'URL MockAPI et que l'endpoint existe bien."
       );
     }
     throw new Error("Réponse inattendue du serveur.");

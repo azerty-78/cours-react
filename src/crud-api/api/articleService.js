@@ -1,12 +1,13 @@
 /**
  * Service API pour les Articles (CRUD).
- * Toutes les fonctions appellent ton backend Spring Boot sur /api/articles.
+ * Toutes les fonctions appellent ta base MockAPI sur /Article.
  * Utilisation : import { articleApi } from '../api/articleService';
  */
 
 import { API_BASE_URL, parseJsonResponse } from './config';
 
-const ARTICLES_URL = `${API_BASE_URL}/api/articles`;
+// Sur MockAPI : baseURL + /Article
+const ARTICLES_URL = `${API_BASE_URL}/Article`;
 
 /**
  * GET - Récupérer tous les articles.
