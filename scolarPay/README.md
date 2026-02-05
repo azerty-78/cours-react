@@ -101,17 +101,18 @@ Ce README adapte le **guide PDF** au contexte d’une application **React** pour
 
 ## 4. Architecture technique React
 
-### 4.1 Stack recommandée
+### 4.1 Stack recommandée (version débutant)
+
+Pour tes apprenants, on reste **très simple** : uniquement React et le routage.
 
 | Rôle | Librairie | Usage |
 |------|-----------|-------|
 | **Framework** | React 18 | UI |
 | **Routage** | React Router v6 | Navigation & routes protégées |
-| **Requêtes HTTP** | Axios | Appels API vers le backend (PHP/SQL) |
 | **État global** | Context API (Auth, User) | Gestion du rôle et des infos utilisateur |
-| **Styles** | Tailwind CSS | Mise en page rapide & responsive |
-| **Formulaires** | React Hook Form (ou `useState`) | Login, ajout versement |
-| **PDF** | Lib côté backend (recommandé) | Génération des reçus (hors React) |
+| **Styles** | Tailwind CSS (ou CSS simple) | Mise en page rapide & responsive |
+
+> Plus tard, quand ils seront à l’aise, vous pourrez ajouter **Axios** et un vrai backend pour remplacer les données de démonstration.
 
 ### 4.2 Structure de dossiers (frontend)
 
@@ -151,12 +152,6 @@ scolarPay/
 │   │
 │   ├── context/
 │   │   └── AuthContext.js      # user, role, login, logout
-│   │
-│   ├── services/
-│   │   ├── api.js              # instance axios
-│   │   ├── authService.js
-│   │   ├── studentService.js
-│   │   └── paymentService.js
 │   │
 │   ├── hooks/
 │   │   └── useAuth.js
@@ -210,11 +205,10 @@ D’après le guide :
 ## 7. Plan de travail conseillé pour les débutants
 
 1. **Installer la stack frontend**
-   - Créer l’app React & installer les dépendances :
+   - Créer l’app React & installer uniquement le routage :
 
    ```bash
-   npm install react-router-dom axios
-   # Optionnel : react-hook-form, date-fns
+   npm install react-router-dom
    ```
 
 2. **Mettre en place le routage de base**
@@ -222,9 +216,9 @@ D’après le guide :
 3. **Créer l’AuthContext**
    - Gestion du `user` (id, nom, rôle), `login`, `logout`.
 4. **Implémenter les pages cœur**
-   - `AdminDashboard`, `ParentDashboard`, `StudentsList`, `StudentDetails`, `AddPayment`, `PaymentsHistory`.
-5. **Connecter au backend**
-   - Utiliser `services/*.js` pour appeler les routes API (login, liste étudiants, versements).
+   - `AdminDashboard`, `ParentDashboard`, `StudentsList`, `StudentDetails`, `AddPayment`, `PaymentsHistory` (avec **données de démonstration** pour l’instant).
+5. **(Plus tard) Connecter au backend**
+   - Quand ils connaîtront Axios, on pourra créer un dossier `services/` et remplacer les données de démo par de vrais appels API.
 6. **Ajouter les contrôles et validations**
    - Vérifier les rôles sur les routes, gérer les erreurs (toasts, messages d’erreur).
 7. **Tester les User Stories**
